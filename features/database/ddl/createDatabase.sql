@@ -1,0 +1,2 @@
+DROP DATABESE IF EXISTS `recipedb`;
+CREATE DATABESE `recipedb` CHARACTER SET utf8mb4;

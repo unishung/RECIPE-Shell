@@ -8,7 +8,7 @@ SQL_FILE="${WORKING_DIR}/ddl/createTables.sql"
 if [ -e $CONFIG_FILE -a -e $SQL_FILE ] ;
 then 
     source $CONFIG_FILE
-    mysql -h $MYSQL_HOST -u $MYSQL_USER -P $MYSQL_PASSWORD -p $MYSQL_PORT < $SQL_FILE
+    mysql -h "$MYSQL_HOST" -u "$MYSQL_USER" --password="$MYSQL_PASSWORD" -P "$MYSQL_PORT" < $SQL_FILE
 else
     echo "[ERROR]必要なファイルがありません"
 fi
